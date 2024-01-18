@@ -7,10 +7,14 @@ let message = ""
 let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")
 let cardsEl = document.getElementById("cards-el")
+let player = {
+    name: "Surya",
+    chips: 150
+}
 // 3. Grab ahold of the player-el paragraph and store it in a variable called playerEl
-
+let playerEl = document.getElementById("player-el") 
 // 4. Render the player's name and chips in playerEl
-
+playerEl.textContent = player.name + ": $" + player.chips
 function getRandomCard() {
     let randomNumber = Math.floor( Math.random()*13 ) + 1
     if (randomNumber > 10) {
